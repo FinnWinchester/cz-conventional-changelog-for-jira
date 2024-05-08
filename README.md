@@ -73,19 +73,19 @@ Like commitizen, you can specify the configuration of cz-conventional-changelog-
 pre-type:
 
 ```text
-JIRA-1234 type(scope): commit subject
+DAZ-12345 type(scope): commit subject
 ```
 
 pre-description:
 
 ```text
-type(scope): JIRA-1234 commit subject
+type(scope): DAZ-12345 commit subject
 ```
 
 post-description:
 
 ```text
-type(scope): commit subject JIRA-1234
+type(scope): commit subject DAZ-12345
 ```
 
 post-body:
@@ -93,7 +93,7 @@ post-body:
 ```text
 type(scope): commit subject
 
-JIRA-1234
+DAZ-12345
 ```
 
 ```text
@@ -101,7 +101,7 @@ type(scope): commit subject
 
 this is a commit body
 
-JIRA-1234
+DAZ-12345
 ```
 
 ## Dynamic Configuration
@@ -162,14 +162,14 @@ List of all supported configurable options when using the _configurable_ approac
 | defaultBody     | undefined         | A default body.                                                                                                                                                                                                                              |
 | defaultIssues   | undefined         | A default issue.                                                                                                                                                                                                                             |
 | jiraPrefix      | 'DAZ'             | The default JIRA ticket prefix that will be displayed.                                                                                                                                                                                       |
-| jiraNumber      | '12345'           | The default JIRA number that will be displayed.                                                                                                                                                                                       |
+| jiraNumber      | '12345'           | The default JIRA ticket number that will be displayed.                                                                                                                                                                                       |
 | types           | ./types.js        | A list (JS Object) of supported commit types.                                                                                                                                                                                                |
 | scopes          | undefined         | A list (JS Array) of scopes that will be available for selection. Note that adding this will change the scope field from Inquirer 'input' to 'list'.                                                                                         |
 | customScope     | false             | If this is set to true, users are given an option to provide custom scope aside the ones predefined in 'scopes' array. In this case a new option named 'custom' appears in the list and once chosen a prompt appears to provide custom scope |
 | jiraOptional    | false             | If this is set to true, you can leave the JIRA field blank.                                                                                                                                                                                  |
 | jiraLocation    | "pre-description" | Changes position of JIRA ID. Options: `pre-type`, `pre-description`, `post-description`, `post-body`                                                                                                                                         |
-| jiraPrepend     | ""                | Prepends JIRA ID with an optional decorator. e.g.: `[DAZ-1234`                                                                                                                                                                               |
-| jiraAppend      | ""                | Appends JIRA ID with an optional decorator. e.g.: `DAZ-1234]`                                                                                                                                                                                |
+| jiraPrepend     | ""                | Prepends JIRA ID with an optional decorator. e.g.: `[DAZ-12345`                                                                                                                                                                              |
+| jiraAppend      | ""                | Appends JIRA ID with an optional decorator. e.g.: `DAZ-12345]`                                                                                                                                                                               |
 | exclamationMark | false             | On breaking changes, adds an exclamation mark (!) after the scope, e.g.: `type(scope)!: break stuff`. When activated, reduces the effective allowed header length by 1.                                                                      |
 
 ### Commitlint
